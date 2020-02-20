@@ -549,10 +549,10 @@ List of the tools you can use to test or monitor your website or application:
 
 ![サーバーサイド]
 
-- [ ] **Webサイトが HTTPS を使用している:** ![high] 
+- [ ] **Web サイトが HTTPS を使用している:** ![high] 
 
     *理由:*
-    > HTTPS は、 e コマース Web サイトだけではなく、データをやりとりする全ての Web サイト用です。データとは、ユーザーが共有するデータ、または外部エンティティと共有するデータです。今時の最新ブラウザは安全でないサイトの機能を制限しています。例えば、インスタンスが HTTPS を使用していない場合、位置情報、プッシュ通知、およびサービスワーカーは機能しません。また、今時はSSL証明書を使用したプロジェクトのセットアップが、以前よりもはるかに簡単になりました。（そして無料の、 [Let's Encrypt](https://letsencrypt.org/) に感謝です。）
+    > HTTPS は、 e コマース Web サイトだけではなく、データをやりとりする全ての Web サイト用です。データとは、ユーザーが共有するデータ、または外部エンティティと共有するデータです。今時の最新ブラウザは安全でないサイトの機能を制限しています。例えば、インスタンスが HTTPS を使用していない場合、位置情報、プッシュ通知、およびサービスワーカーは機能しません。また、今時は SSL 証明書を使用したプロジェクトのセットアップが、以前よりもはるかに簡単になりました。（そして無料の、 [Let's Encrypt](https://letsencrypt.org/) に感謝です。）
 
  * 📖 [Why Use HTTPS? | Cloudflare](https://www.cloudflare.com/learning/security/why-use-https/)
  * 📖 [Enabling HTTPS Without Sacrificing Your Web Performance - Moz](https://moz.com/blog/enabling-https-without-sacrificing-web-performance)
@@ -563,7 +563,7 @@ List of the tools you can use to test or monitor your website or application:
 - [ ] **ページ容量 < 1500 KB (理想的には < 500 KB):** ![high] ページとリソースのサイズをできるだけ減らす。
 
     *理由:*
-    > 500 KB 未満を目標にするのが理想ですが、 Web の状態では、KBの中央値が約 1500 KB （モバイルでも）であることが示されています。ターゲットユーザー、ネットワーク接続、デバイスに応じて、可能な限り総キロバイト数を減らすことで、可能な限り最高のユーザー体験を提供することができます。
+    > 500 KB 未満を目標にするのが理想ですが、 Web の状態では、KB の中央値が約 1500 KB （モバイルでも）であることが示されています。ターゲットユーザー、ネットワーク接続、デバイスに応じて、可能な限り総キロバイト数を減らすことで、可能な限り最高のユーザー体験を提供することができます。
 
     *方法:*
     > ⁃ フロントエンドパフォーマンスチェックリスト内の全てのルールは、リソースとコードを可能な限り削減するのに役立ちます。
@@ -592,7 +592,7 @@ List of the tools you can use to test or monitor your website or application:
     * 📖 [Time to First Byte (TTFB)](https://varvy.com/pagespeed/ttfb.html)
     * 🛠 [Global latency testing tool](https://latency.apex.sh)
 
-* [ ] **クッキーサイズ:** ![medium] クッキーを利用しているのであれば、 各クッキーが4096バイトを超えないようにし、ドメイン毎に20を超えるクッキーがないようにしてください。
+* [ ] **クッキーサイズ:** ![medium] クッキーを利用しているのであれば、各クッキーが4096バイトを超えないようにし、ドメイン毎に20を超えるクッキーがないようにしてください。
 
     *理由:*
     > クッキーは、ウェブサーバーとブラウザ間で HTTP ヘッダーでやりとりされます。ユーザーの応答時間への家今日を最小限に抑えるために、クッキーのサイズをできる限り小さくすることが重要です。
