@@ -1,0 +1,17 @@
+{
+  "name": "front-end-performance-checklist",
+  "version": "1.0.0",
+  "description": "front-end-performance-checklist in Japanese",
+  "dependencies": {},
+  "devDependencies": {
+    "textlint-rule-preset-jtf-style": "^2.3.4"
+  },
+  "scripts": {
+    "lint": "textlint README.md",
+    "lint:fix": "textlint --fix README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GameWith/Front-End-Performance-Checklist.git"
+  }
+}
