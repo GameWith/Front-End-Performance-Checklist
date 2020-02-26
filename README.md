@@ -47,7 +47,7 @@
 3. **[Fonts](#fonts)**
 4. **[Images](#images)**
 5. **[JavaScript](#javascript)**
-6. **[Server](#server) (in progress)**
+6. **[サーバ](#サーバ) （進行中）**
 7. **[JS Frameworks](#performances-and-js-frameworks) (in progress)**
 
 ## Introduction
