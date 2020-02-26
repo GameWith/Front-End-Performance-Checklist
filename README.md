@@ -267,20 +267,20 @@ Web サイト または アプリケーションのテストやモニタリン�
     > 未使用の CSS セレクターを削除すると、ファイルサイズが削減できアセットの読み込みも早くなります。
 
     *方法:*
-    > ⁃ ⚠️ 使用する CSS フレームワークに リセットCSS / ノーマライズCSS のコードが含まれていないかどうかを常に確認してください。 リセットCSS / ノーマライズCSS ファイルに記載されている全てのコードを必要としない場合があります。
+    > ⁃ ⚠️ 使用する CSS フレームワークに リセット CSS / ノーマライズ CSS のコードが含まれていないかどうかを常に確認してください。 リセット CSS / ノーマライズ CSS ファイルに記載されている全てのコードを必要としない場合があります。
 
     * 🛠 [UnCSS Online](https://uncss-online.com/)
     * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
     * 🛠 [PurgeCSS](https://github.com/FullHuman/purgecss)
     * 🛠 [Chrome DevTools Coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage)
 
-* [ ] **クリティカルCSS:** ![high] クリティカルCSS（または above the fold）とは、ファーストビューをレンダリングするのに使用されるすべての CSS です。主要な CSS の読み込み前にこれを `<style> </style>` タグにインライン化（可能な限り圧縮）して記載します。
+* [ ] **クリティカル CSS:** ![high] クリティカル CSS（または above the fold）とは、ファーストビューをレンダリングするのに使用されるすべての CSS です。主要な CSS の読み込み前にこれを `<style> </style>` タグにインライン化（可能な限り圧縮）して記載します。
 
     *理由:*
-    > インライン化したクリティカルCSS を使用すると、Web ページのレンダリングを高速化し、サーバへのリクエスト回数を減らすことができます。
+    > インライン化したクリティカル CSS を使用すると、Web ページのレンダリングを高速化し、サーバへのリクエスト回数を減らすことができます。
 
     *方法:*
-    > オンラインツール、または Addy Osmani が開発したようなプラグインを使用してクリティカルCSS を生成することができます。
+    > オンラインツール、または Addy Osmani が開発したようなプラグインを使用してクリティカル CSS を生成することができます。
 
     * 📖 [Understanding Critical CSS](https://www.smashingmagazine.com/2015/08/understanding-critical-css/)
     * 🛠 [Critical by Addy Osmani on GitHub](https://github.com/addyosmani/critical) automates this.
@@ -289,23 +289,23 @@ Web サイト または アプリケーションのテストやモニタリン�
      * 📖 [Reduce the size of the above-the-fold content
 ](https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent)
 
-- [ ] **埋め込み または インラインCSS:** ![high] `<body>` 内で埋め込みCSS、またはインラインCSS を使うのは避けましょう。 *（HTTP/2 では無効）*
+- [ ] **埋め込み または インライン CSS:** ![high] `<body>` 内で埋め込み CSS、またはインライン CSS を使うのは避けましょう。 *（HTTP/2 では無効）*
 
     *理由:*
     > 最初の理由の一つは、**コンテンツをデザインから分離** することがグッドプラクティスだからです。コードの保守性が向上し、サイトのアクセシビリティも向上します。パフォーマンスに関して言うと、HTML ページのファイルサイズと読み込み時間を短縮することができます。
 
     *方法:*
-    > 常に外部スタイルシートを使用するか、`<head>` に CSS を埋め込みます。（他の CSSパフォーマンスルールに従います）
+    > 常に外部スタイルシートを使用するか、`<head>` に CSS を埋め込みます。（他の CSS パフォーマンスルールに従います）
 
     * 📖 [Observe CSS Best Practices: Avoid CSS Inline Styles](https://www.lifewire.com/avoid-inline-styles-for-css-3466846)
 
-- [ ] **スタイルシートの複雑さを分析する:** ![high] スタイルシートを分析すると、CSSセレクターの問題、冗長性、重複を見つけるのに役立ちます。
+- [ ] **スタイルシートの複雑さを分析する:** ![high] スタイルシートを分析すると、CSS セレクターの問題、冗長性、重複を見つけるのに役立ちます。
 
     *理由:*
     > CSS に冗長性や検証エラーがある場合がありますが、CSS ファイルを分析しこれらの複雑なコードを削除すると、CSS ファイルの読み込みが高速化されます。（ブラウザが高速に読み取るため）
 
     *方法:*
-    > CSSプリプロセッサを使用して、CSS を整理する必要があります。下記のオンラインツールの一部はコードの分析と修正にも役立ちます。
+    > CSS プリプロセッサを使用して、CSS を整理する必要があります。下記のオンラインツールの一部はコードの分析と修正にも役立ちます。
 
     * 🛠 [TestMyCSS | Optimize and Check CSS Performance](http://www.testmycss.com/)
     * 🛠 [CSS Stats](https://cssstats.com/)
