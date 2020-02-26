@@ -545,14 +545,14 @@ List of the tools you can use to test or monitor your website or application:
 
 **[⬆ back to top](#table-of-contents)**
 
-## サーバー
+## サーバ
 
-![サーバーサイド]
+![サーバサイド]
 
 - [ ] **Web サイトが HTTPS を使用している:** ![high] 
 
     *理由:*
-    > HTTPS は、 e コマース Web サイトだけではなく、データをやりとりする全ての Web サイト用です。データとは、ユーザーが共有するデータ、または外部エンティティと共有するデータです。今時の最新ブラウザは安全でないサイトの機能を制限しています。例えば、インスタンスが HTTPS を使用していない場合、位置情報、プッシュ通知、およびサービスワーカーは機能しません。また、今時は SSL 証明書を使用したプロジェクトのセットアップが、以前よりもはるかに簡単になりました。（そして無料の、 [Let's Encrypt](https://letsencrypt.org/) に感謝です。）
+    > HTTPS は、 e コマース Web サイトだけではなく、データをやりとりする全ての Web サイト用です。データとは、ユーザが共有するデータ、または外部エンティティと共有するデータです。今時の最新ブラウザは安全でないサイトの機能を制限しています。例えば、インスタンスが HTTPS を使用していない場合、位置情報、プッシュ通知、およびサービスワーカーは機能しません。また、今時は SSL 証明書を使用したプロジェクトのセットアップが、以前よりもはるかに簡単になりました。（そして無料の、 [Let's Encrypt](https://letsencrypt.org/) に感謝です。）
 
  * 📖 [Why Use HTTPS? | Cloudflare](https://www.cloudflare.com/learning/security/why-use-https/)
  * 📖 [Enabling HTTPS Without Sacrificing Your Web Performance - Moz](https://moz.com/blog/enabling-https-without-sacrificing-web-performance)
@@ -563,7 +563,7 @@ List of the tools you can use to test or monitor your website or application:
 - [ ] **ページ容量 < 1500 KB (理想的には < 500 KB):** ![high] ページとリソースのサイズをできるだけ減らす。
 
     *理由:*
-    > 500 KB 未満を目標にするのが理想ですが、 Web の状態では、KB の中央値が約 1500 KB （モバイルでも）であることが示されています。ターゲットユーザー、ネットワーク接続、デバイスに応じて、可能な限り総キロバイト数を減らすことで、可能な限り最高のユーザー体験を提供することができます。
+    > 500 KB 未満を目標にするのが理想ですが、 Web の状態では、KB の中央値が約 1500 KB （モバイルでも）であることが示されています。ターゲットユーザ、ネットワーク接続、デバイスに応じて、可能な限り総キロバイト数を減らすことで、可能な限り最高のユーザ体験を提供することができます。
 
     *方法:*
     > ⁃ フロントエンドパフォーマンスチェックリスト内の全てのルールは、リソースとコードを可能な限り削減するのに役立ちます。
@@ -572,10 +572,10 @@ List of the tools you can use to test or monitor your website or application:
     * 🛠 [What Does My Site Cost?](https://whatdoesmysitecost.com/)
     * 🛠 [web - Measure full page size in Chrome DevTools - Stack Overflow](https://stackoverflow.com/questions/38239980/measure-full-page-size-in-chrome-devtools)
 
-- [ ] **ページ読み込み時間 < 3 秒:** ![high] ページの読み込み時間を可能な限り短縮して、コンテンツを素早くユーザーに配信する。
+- [ ] **ページ読み込み時間 < 3 秒:** ![high] ページの読み込み時間を可能な限り短縮して、コンテンツを素早くユーザに配信する。
 
     *理由:*
-    > Web サイトやアプリが高速であればあるほど、直帰が増加する可能性を減らし、ユーザーや将来のクライアントを失う可能性を減らします。主題に関する十分な調査は、この点を証明します。
+    > Web サイトやアプリが高速であればあるほど、直帰が増加する可能性を減らし、ユーザや将来のクライアントを失う可能性を減らします。主題に関する十分な調査は、この点を証明します。
 
     *方法:*
 
@@ -595,7 +595,7 @@ List of the tools you can use to test or monitor your website or application:
 * [ ] **クッキーサイズ:** ![medium] クッキーを利用しているのであれば、各クッキーが4096バイトを超えないようにし、ドメイン毎に20を超えるクッキーがないようにしてください。
 
     *理由:*
-    > クッキーは、ウェブサーバーとブラウザ間で HTTP ヘッダーでやりとりされます。ユーザーの応答時間への家今日を最小限に抑えるために、クッキーのサイズをできる限り小さくすることが重要です。
+    > クッキーは、ウェブサーバとブラウザ間で HTTP ヘッダでやりとりされます。ユーザの応答時間への家今日を最小限に抑えるために、クッキーのサイズをできる限り小さくすることが重要です。
 
     *方法:*
     > 不要なクッキーを排除する。
@@ -620,10 +620,10 @@ List of the tools you can use to test or monitor your website or application:
 - [ ] **到達可能なファイルを提供する:** ![high] 到達不能なファイルへのリクエストを避けます（404）。
  * 📖 [How to avoid bad requests](https://varvy.com/pagespeed/avoid-bad-requests.html)
 
-- [ ] **HTTP キャッシュヘッダーを適切に設定する:** ![high] HTTP ヘッダーを設定して、ブラウザとサーバー間の往復コストを回避します。
+- [ ] **HTTP キャッシュヘッダを適切に設定する:** ![high] HTTP ヘッダを設定して、ブラウザとサーバ間の往復コストを回避します。
  * 📖 [Using cache-control for browser caching](https://varvy.com/pagespeed/cache-control.html)
 
-- [ ] **GZIP / Brotli 圧縮が有効になっている:** ![high] GZIP や Brotli などの圧縮方法を利用して、 JavaScript ファイルのサイズを小さくします。ファイルのサイズを小さくすると、ユーザーはアセットをより速くダウンロードできるようになり、パフォーマンスが向上します。
+- [ ] **GZIP / Brotli 圧縮が有効になっている:** ![high] GZIP や Brotli などの圧縮方法を利用して、 JavaScript ファイルのサイズを小さくします。ファイルのサイズを小さくすると、ユーザはアセットをより速くダウンロードできるようになり、パフォーマンスが向上します。
 
  * 🛠 [Check GZIP compression](https://checkgzipcompression.com/)
  * 🛠 [Check Brotli Compression](https://tools.keycdn.com/brotli-test)
