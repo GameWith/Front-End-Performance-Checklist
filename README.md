@@ -198,20 +198,20 @@ Web サイト または アプリケーションのテストやモニタリン�
 
 ![css]
 
-- [ ] **Minification:** ![high] All CSS files are minified, comments, white spaces and new lines are removed from production files.
+- [ ] **ファイルの軽量化（minification）:** ![high] すべての CSS ファイルは圧縮され、コメント、空白、改行が本番のファイルから削除されています。
 
-    *Why:*
-    > When CSS files are minified, the content is loaded faster and less data is sent to the client. It's important to always minify CSS files in production. It is beneficial for the user as it is for any business who wants to lower bandwidth costs and lower resource usage.
+    *理由:*
+    > CSS ファイルの圧縮を行うと、コンテンツの読み込み時間が早くなりクライアントに送信されるデータが少なくなります。常に本番用の CSS ファイルは圧縮されていることが重要です。帯域幅やリソース使用量を削減したいビジネスユーザにとって有益です。
 
-    *How:*
-    > ⁃ Use tools to minify your files automatically before or during your build or your deployment.
+    *方法:*
+    > ⁃ ビルドまたはデプロイメントの前または途中でファイルを自動的に圧縮するツールを使用します。
 
     * 🛠 [cssnano: A modular minifier based on the PostCSS ecosystem. - cssnano](https://cssnano.co/)
     * 🛠 [@neutrinojs/style-minify - npm](https://www.npmjs.com/package/@neutrinojs/style-minify)
     * 🛠 [Online CSS Compressor](http://refresh-sf.com)
 
 
-- [ ] **Concatenation:** ![medium] CSS files are concatenated in a single file *(Not always valid for HTTP/2)*.
+- [ ] **ファイルの結合:** ![medium] CSS ファイルを1ファイルに結合します。 *（HTTP/2 では常に有効とは限りません）*
 
     ```html
 
@@ -223,64 +223,64 @@ Web サイト または アプリケーションのテストやモニタリン�
     <link rel="stylesheet" href="foobar.css"/>
     ```
 
-    *Why:*
-    > If you are still using HTTP/1, you may need to still concatenate your files, it's less true if your server use HTTP/2 (tests should be made).
+    *理由:*
+    > まだ HTTP/1 を使用していれば、ファイルを結合する必要があるかもしれません。もしサーバが HTTP/2 を使用している場合はその限りではありません。（テストを行う必要があります）
 
-    *How:*
-    > ⁃ Use online tool or any plugin before or during your build or your deployment to concatenate your files. <br>
-    ⁃ Ensure, of course, that concatenation does not break your project.
+    *方法:*
+    > ⁃ ビルド前かビルド中、もしくはデプロイ前かデプロイ中に、オンラインのツールもしくはプラグインを使ってファイルを結合します。 <br>
+    ⁃ もちろん、結合によりプロジェクトが壊れないかどうかは確認してください。
 
     * 📖 [HTTP: Optimizing Application Delivery - High Performance Browser Networking (O'Reilly)](https://hpbn.co/optimizing-application-delivery/#optimizing-for-http2)
     * 📖 [Performance Best Practices in the HTTP/2 Era](https://deliciousbrains.com/performance-best-practices-http2/)
 
-- [ ] **Non-blocking:** ![high] CSS files need to be non-blocking to prevent the DOM from taking time to load.
+- [ ] **ノンブロッキング:** ![high] DOM の読み込みに時間がかかるのを防ぐため、CSS ファイルはノンブロッキングである必要があります。
 
     ```html
     <link rel="preload" href="global.min.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="global.min.css"></noscript>
     ```
 
-    *Why:*
-    > CSS files can block the page load and delay the rendering of your page. Using `preload` can actually load the CSS files before the browser starts showing the content of the page.
+    *理由:*
+    > CSS ファイルは、ページの読み込みをブロックしレンダリングを遅延させる可能性があります。`preload` を使用すると、ブラウザがページのコンテンツを表示し始める前に CSS ファイルを読み込ませることができます。
 
-    *How:*
-    > ⁃ You need to add the `rel` attribute with the `preload` value and add `as="style"` on the `<link>` element.
+    *方法:*
+    > ⁃ `preload` の値を持つ `rel` 属性と、`as="style"` を `<link>` 要素に追加する必要があります。
 
     * 🛠 [loadCSS by filament group](https://github.com/filamentgroup/loadCSS)
     * 📖 [Example of preload CSS using loadCSS](https://gist.github.com/thedaviddias/c24763b82b9991e53928e66a0bafc9bf)
     * 📖 [Preloading content with rel="preload"](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content)
     * 📖 [Preload: What Is It Good For? — Smashing Magazine](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/)
 
-- [ ] **Length of CSS classes:** ![low] The length of your classes can have an (slight) impact on your HTML and CSS files (eventually).
+- [ ] **CSS クラスの長さ:** ![low] クラスの長さは（最終的に）HTML ファイルと CSS ファイルに（わずかな）影響を与える可能性があります。
 
-    *Why:*
-    > Even performance impacts can be disputable, taking a decision on a naming strategy regarding your project can have a substantial impact on the maintainability of your stylesheets. If you are using BEM, in some cases, you can end up with classes having more characters than needed. It's always important to choose wisely your names and namespaces.
+    *理由:*
+    > パフォーマンスへの影響も議論の余地がありますが、プロジェクトの命名規則を決めておくと、スタイルシートの保守性に大きな影響を与える可能性があります。BEM を使用する場合、必要以上の文字がクラスに含まれることがあります。名前や名前空間をしっかりと考え選択することは常に重要です。
 
-    *How:*
-    > Setting a limit in terms of number of characters could be interesting for some people, but ensuring that you broke down your website in components can help to reduce the amount of classes (and declarations) and the length of your classes.
+    *方法:*
+    > 文字数に制限を設定することは一部の人にとっては興味深いことですが、Web サイトをコンポーネントに分割することで、クラス（および宣言）の数と長さを減らすことができます。
 
     * 🛠 [long vs short class · jsPerf](https://jsperf.com/long-vs-short-class)
 
-- [ ] **Unused CSS:** ![medium] Remove unused CSS selectors.
+- [ ] **未使用の CSS:** ![medium] 未使用の CSS セレクタを削除する。
 
-    *Why:*
-    > Removing unused CSS selectors can reduce the size of your files and then speed up the load of your assets.
+    *理由:*
+    > 未使用の CSS セレクタを削除すると、ファイルサイズが削減できアセットの読み込みも早くなります。
 
-    *How:*
-    > ⁃ ⚠️ Always check if the framework CSS you want to use don't already has a reset / normalize code included. Sometimes you may not need everything that is inside your reset / normalize file.
+    *方法:*
+    > ⁃ ⚠️ 使用する CSS フレームワークにリセット CSS / ノーマライズ CSS のコードが含まれていないかどうかを常に確認してください。リセット CSS / ノーマライズ CSS ファイルに記載されている全てのコードを必要としない場合があります。
 
     * 🛠 [UnCSS Online](https://uncss-online.com/)
     * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
     * 🛠 [PurgeCSS](https://github.com/FullHuman/purgecss)
     * 🛠 [Chrome DevTools Coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage)
 
-* [ ] **CSS Critical:** ![high] The CSS critical (or "above the fold") collects all the CSS used to render the visible portion of the page. It is embedded before your principal CSS call and between `<style></style>` in a single line (minified if possible).
+* [ ] **クリティカル CSS:** ![high] クリティカル CSS（または above the fold）とは、ファーストビューのレンダリングに使用されるすべての CSS です。主要な CSS の読み込み前にこれを `<style></style>` タグにインライン化（可能な限り圧縮）して記載します。
 
-    *Why:*
-    > Inlining critical CSS help to speed up the rendering of the web pages reducing the number of requests to the server.
+    *理由:*
+    > インライン化したクリティカル CSS を使用すると、Web ページのレンダリングを高速化し、サーバへのリクエスト回数を減らすことができます。
 
-    *How:*
-    > Generate the CSS critical with online tools or using a plugin like the one that Addy Osmani developed.
+    *方法:*
+    > オンラインツール、または Addy Osmani が開発したようなプラグインを使用してクリティカル CSS を生成することができます。
 
     * 📖 [Understanding Critical CSS](https://www.smashingmagazine.com/2015/08/understanding-critical-css/)
     * 🛠 [Critical by Addy Osmani on GitHub](https://github.com/addyosmani/critical) automates this.
@@ -289,30 +289,30 @@ Web サイト または アプリケーションのテストやモニタリン�
      * 📖 [Reduce the size of the above-the-fold content
 ](https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent)
 
-- [ ] **Embedded or inline CSS:** ![high] Avoid using embed or inline CSS inside your `<body>` *(Not valid for HTTP/2)*
+- [ ] **埋め込み または インライン CSS:** ![high] `<body>` 内で埋め込み CSS、またはインライン CSS を使うのは避けましょう。 *（HTTP/2 では無効）*
 
-    *Why:*
-    > One of the first reason it's because it's a good practice to **separate content from design**. It also helps you have a more maintainable code and keep your site accessible. But regarding performance, it's simply because it decreases the file-size of your HTML pages and the load time.
+    *理由:*
+    > 最初の理由の一つは、**コンテンツをデザインから分離** することがグッドプラクティスだからです。コードの保守性が向上し、サイトのアクセシビリティも向上します。パフォーマンスに関して言うと、HTML ページのファイルサイズと読み込み時間を短縮することができます。
 
-    *How:*
-    > Always use external stylesheets or embed CSS in your `<head>` (and follow the others CSS performance rules)
+    *方法:*
+    > 常に外部スタイルシートを使用するか、`<head>` に CSS を埋め込みます。（他の CSS パフォーマンスルールに従います）
 
     * 📖 [Observe CSS Best Practices: Avoid CSS Inline Styles](https://www.lifewire.com/avoid-inline-styles-for-css-3466846)
 
-- [ ] **Analyse stylesheets complexity:** ![high] Analyzing your stylesheets can help you to flag issues, redundancies and duplicate CSS selectors.
+- [ ] **スタイルシートの複雑さを分析する:** ![high] スタイルシートを分析すると、CSS セレクタの問題、冗長性、重複を見つけるのに役立ちます。
 
-    *Why:*
-    > Sometimes you may have redundancies or validation errors in your CSS, analysing your CSS files and removed these complexities can help you to speed up your CSS files (because your browser will read them faster)
+    *理由:*
+    > CSS に冗長性や検証エラーがある場合は、CSS ファイルを分析しこれらの複雑なコードを削除すると、CSS ファイルの読み込みが高速化されます。（ブラウザが高速に読み取るためです）
 
-    *How:*
-    > Your CSS should be organized, using a CSS preprocessor can help you with that. Some online tools listed below can also help you analysing and correct your code.
+    *方法:*
+    > CSS プリプロセッサを使用して、CSS を整理する必要があります。下記のオンラインツールの一部はコードの分析と修正にも役立ちます。
 
     * 🛠 [TestMyCSS | Optimize and Check CSS Performance](http://www.testmycss.com/)
     * 🛠 [CSS Stats](https://cssstats.com/)
     * 🛠 [macbre/analyze-css: CSS selectors complexity and performance analyzer](https://github.com/macbre/analyze-css)
-    * 🛠 [Project Wallace](https://www.projectwallace.com/) is like CSS Stats but stores stats over time so you can track your changes
+    * 🛠 [Project Wallace](https://www.projectwallace.com/) は  CSS Stats に似ていますが、変更を追跡できるように統計結果を長期間保存します。
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ トップに戻る](#table-of-contents)**
 
 ## Fonts
 
