@@ -606,7 +606,7 @@
     * 📖 [Website Performance: Cookies Don't Taste So Good - Monitis Blog](http://www.monitis.com/blog/website-performance-cookies-dont-taste-so-good/)
     * 📖 [Google's Web Performance Best Practices #3: Minimize Request Overhead - GlobalDots Blog](https://www.globaldots.com/googles-web-performance-best-practices-3-minimize-request-overhead/)
 
-- [ ] **HTTP リクエストの最小化:** ![high] リクエストされている全てのファイルがウェブサイトまたはアプリケーションに不可欠であることを常に確認してください。
+- [ ] **HTTP リクエストの最小化:** ![high] リクエストされている全てのファイルが、ウェブサイトまたはアプリケーションに不可欠であることを常に確認してください。
  * 📖 [Combine external CSS](https://varvy.com/pagespeed/combine-external-css.html)
  * 📖 [Combine external JavaScript](https://varvy.com/pagespeed/combine-external-javascript.html)
 
