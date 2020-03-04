@@ -66,7 +66,7 @@
 
 ### パフォーマンスツール
 
-Web サイト または アプリケーションのテストやモニタリングに使用できるツールのリスト:
+ウェブサイト または アプリケーションのテストやモニタリングに使用できるツールのリスト:
 
  * 🛠 [WebPagetest - Website Performance and Optimization Test](https://www.webpagetest.org/)
  * 🛠 ☆ [Dareboost: Website Speed Test and Website Analysis](https://www.dareboost.com/) (use the coupon WPCDD20 for -20%)
@@ -149,7 +149,7 @@ Web サイト または アプリケーションのテストやモニタリン�
     ```
 
     *理由:*
-    > HTML5 ではデフォルトで text/css と text/javascript が含まれているため、タイプ属性は必要ありません。未使用のコードはページを重くするため、Web サイトやアプリで使用されないコードは削除すべきです。
+    > HTML5 ではデフォルトで text/css と text/javascript が含まれているため、タイプ属性は必要ありません。未使用のコードはページを重くするため、ウェブサイトやアプリで使用されないコードは削除すべきです。
 
     *方法:*
     > すべての `<link>` および `<script>` タグに type 属性がないことを確認してください。
@@ -257,7 +257,7 @@ Web サイト または アプリケーションのテストやモニタリン�
     > パフォーマンスへの影響も議論の余地がありますが、プロジェクトの命名規則を決めておくと、スタイルシートの保守性に大きな影響を与える可能性があります。BEM を使用する場合、必要以上の文字がクラスに含まれることがあります。名前や名前空間をしっかりと考え選択することは常に重要です。
 
     *方法:*
-    > 文字数に制限を設定することは一部の人にとっては興味深いことですが、Web サイトをコンポーネントに分割することで、クラス（および宣言）の数と長さを減らすことができます。
+    > 文字数に制限を設定することは一部の人にとっては興味深いことですが、ウェブサイトをコンポーネントに分割することで、クラス（および宣言）の数と長さを減らすことができます。
 
     * 🛠 [long vs short class · jsPerf](https://jsperf.com/long-vs-short-class)
 
@@ -549,10 +549,10 @@ Web サイト または アプリケーションのテストやモニタリン�
 
 ![サーバサイド]
 
-- [ ] **Web サイトが HTTPS を使用している:** ![high] 
+- [ ] **ウェブサイトが HTTPS を使用していること:** ![high] 
 
     *理由:*
-    > HTTPS は、 e コマース Web サイトだけではなく、データをやりとりする全ての Web サイト用です。データとは、ユーザが共有するデータ、または外部エンティティと共有するデータです。今時の最新ブラウザは安全でないサイトの機能を制限しています。例えば、インスタンスが HTTPS を使用していない場合、位置情報、プッシュ通知、およびサービスワーカーは機能しません。また、今時は SSL 証明書を使用したプロジェクトのセットアップが、以前よりもはるかに簡単になりました。（そして無料の、 [Let's Encrypt](https://letsencrypt.org/) に感謝です。）
+    > HTTPS は、 e コマースウェブサイトだけではなく、データをやりとりする全てのウェブサイト用です。データとは、ユーザが共有するデータ、または外部エンティティと共有するデータです。今時の最新ブラウザは安全でないサイトの機能を制限しています。例えば、インスタンスが HTTPS を使用していない場合、位置情報、プッシュ通知、およびサービスワーカーは機能しません。また、現在は SSL 証明書を使用したプロジェクトのセットアップが、以前よりもはるかに簡単になりました。（そして、 [Let's Encrypt](https://letsencrypt.org/) のおかげで無料です。）
 
  * 📖 [Why Use HTTPS? | Cloudflare](https://www.cloudflare.com/learning/security/why-use-https/)
  * 📖 [Enabling HTTPS Without Sacrificing Your Web Performance - Moz](https://moz.com/blog/enabling-https-without-sacrificing-web-performance)
@@ -575,7 +575,7 @@ Web サイト または アプリケーションのテストやモニタリン�
 - [ ] **ページ読み込み時間 < 3 秒:** ![high] ページの読み込み時間を可能な限り短縮して、コンテンツを素早くユーザに配信する。
 
     *理由:*
-    > Web サイトやアプリが高速であればあるほど、直帰が増加する可能性を減らし、ユーザや将来のクライアントを失う可能性を減らします。主題に関する十分な調査は、この点を証明します。
+    >ウェブサイトやアプリが高速であればあるほど、直帰が増加する可能性を減らし、ユーザや将来のクライアントを失う可能性を減らします。主題に関する十分な調査は、この点を証明します。
 
     *方法:*
 
@@ -606,24 +606,24 @@ Web サイト または アプリケーションのテストやモニタリン�
     * 📖 [Website Performance: Cookies Don't Taste So Good - Monitis Blog](http://www.monitis.com/blog/website-performance-cookies-dont-taste-so-good/)
     * 📖 [Google's Web Performance Best Practices #3: Minimize Request Overhead - GlobalDots Blog](https://www.globaldots.com/googles-web-performance-best-practices-3-minimize-request-overhead/)
 
-- [ ] **HTTP リクエストの最小化:** ![high] リクエストされている全てのファイルが Web サイトまたはアプリケーションに不可欠であることを常に確認してください。
+- [ ] **HTTP リクエストの最小化:** ![high] リクエストされている全てのファイルがウェブサイトまたはアプリケーションに不可欠であることを常に確認してください。
  * 📖 [Combine external CSS](https://varvy.com/pagespeed/combine-external-css.html)
  * 📖 [Combine external JavaScript](https://varvy.com/pagespeed/combine-external-javascript.html)
 
-- [ ] **CDN を使用してアセットを配信する:** ![medium] CDN を利用して、コンテンツをより速く世界中に配信します。
+- [ ] **CDN を使用してアセットを配信:** ![medium] CDN を利用して、コンテンツをより速く世界中に配信します。
 
  * 📖 [10 Tips to Optimize CDN Performance - CDN Planet](https://www.cdnplanet.com/blog/10-tips-optimize-cdn-performance/)
  * 📖 [HTTP Caching  |  Web Fundamentals  |  Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
 
-- [ ] **同じプロトコルからファイルを提供する:** ![high] 例えば、 HTTPS を使用している Web サイトで、 HTTP を使用したソースからファイルを提供する Web サイトを作成しないでください。 Web サイトが HTTPS を使用している場合、外部ファイルは同じプロトコルから取得する必要があります。
+- [ ] **同じプロトコルからファイルを提供:** ![high] 例えば、 HTTPS を使用しているウェブサイトで、 HTTP を使用したソースからファイルを提供するウェブサイトを作成しないでください。ウェブサイトが HTTPS を使用している場合、外部ファイルは同じプロトコルから取得する必要があります。
 
-- [ ] **到達可能なファイルを提供する:** ![high] 到達不能なファイルへのリクエストを避けます（404）。
+- [ ] **到達可能なファイルを提供:** ![high] 到達不能なファイルへのリクエストを避けます（404）。
  * 📖 [How to avoid bad requests](https://varvy.com/pagespeed/avoid-bad-requests.html)
 
-- [ ] **HTTP キャッシュヘッダを適切に設定する:** ![high] HTTP ヘッダを設定して、ブラウザとサーバ間の往復コストを回避します。
+- [ ] **HTTP キャッシュヘッダを適切に設定:** ![high] HTTP ヘッダを設定して、ブラウザとサーバ間の往復コストを回避します。
  * 📖 [Using cache-control for browser caching](https://varvy.com/pagespeed/cache-control.html)
 
-- [ ] **GZIP / Brotli 圧縮が有効になっている:** ![high] GZIP や Brotli などの圧縮方法を利用して、 JavaScript ファイルのサイズを小さくします。ファイルのサイズを小さくすると、ユーザはアセットをより速くダウンロードできるようになり、パフォーマンスが向上します。
+- [ ] **GZIP / Brotli 圧縮の有効化:** ![high] GZIP や Brotli などの圧縮方法を利用して、 JavaScript ファイルのサイズを小さくします。ファイルのサイズを小さくすると、ユーザはアセットをより速くダウンロードできるようになり、パフォーマンスが向上します。
 
  * 🛠 [Check GZIP compression](https://checkgzipcompression.com/)
  * 🛠 [Check Brotli Compression](https://tools.keycdn.com/brotli-test)
