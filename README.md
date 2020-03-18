@@ -47,8 +47,8 @@
 3. **[Fonts](#fonts)**
 4. **[Images](#images)**
 5. **[JavaScript](#javascript)**
-6. **[Server](#server) (作成中)**
-7. **[JS Frameworks](#performances-and-js-frameworks) (作成中)**
+6. **[サーバ](#サーバ) （作成中）**
+7. **[JS Frameworks](#performances-and-js-frameworks) （作成中）**
 
 ## はじめに
 
@@ -66,7 +66,7 @@
 
 ### パフォーマンスツール
 
-Web サイト または アプリケーションのテストやモニタリングに使用できるツールのリスト:
+ウェブサイト または アプリケーションのテストやモニタリングに使用できるツールのリスト:
 
  * 🛠 [WebPagetest - Website Performance and Optimization Test](https://www.webpagetest.org/)
  * 🛠 ☆ [Dareboost: Website Speed Test and Website Analysis](https://www.dareboost.com/) (use the coupon WPCDD20 for -20%)
@@ -149,7 +149,7 @@ Web サイト または アプリケーションのテストやモニタリン�
     ```
 
     *理由:*
-    > HTML5 ではデフォルトで text/css と text/javascript が含まれているため、タイプ属性は必要ありません。未使用のコードはページを重くするため、Web サイトやアプリで使用されないコードは削除すべきです。
+    > HTML5 ではデフォルトで text/css と text/javascript が含まれているため、タイプ属性は必要ありません。未使用のコードはページを重くするため、ウェブサイトやアプリで使用されないコードは削除すべきです。
 
     *方法:*
     > すべての `<link>` および `<script>` タグに type 属性がないことを確認してください。
@@ -257,7 +257,7 @@ Web サイト または アプリケーションのテストやモニタリン�
     > パフォーマンスへの影響も議論の余地がありますが、プロジェクトの命名規則を決めておくと、スタイルシートの保守性に大きな影響を与える可能性があります。BEM を使用する場合、必要以上の文字がクラスに含まれることがあります。名前や名前空間をしっかりと考え選択することは常に重要です。
 
     *方法:*
-    > 文字数に制限を設定することは一部の人にとっては興味深いことですが、Web サイトをコンポーネントに分割することで、クラス（および宣言）の数と長さを減らすことができます。
+    > 文字数に制限を設定することは一部の人にとっては興味深いことですが、ウェブサイトをコンポーネントに分割することで、クラス（および宣言）の数と長さを減らすことができます。
 
     * 🛠 [long vs short class · jsPerf](https://jsperf.com/long-vs-short-class)
 
@@ -545,14 +545,14 @@ Web サイト または アプリケーションのテストやモニタリン�
 
 **[⬆ back to top](#table-of-contents)**
 
-## Server
+## サーバ
 
-![server-side]
+![サーバサイド]
 
-- [ ] **Your website is using HTTPS:** ![high] 
+- [ ] **ウェブサイトが HTTPS を使用していること:** ![high] 
 
-    *Why:*
-    > HTTPS is not only for ecommerce websites, but for all websites that are exchanging data. Data shared by a user or data shared to an external entity. Modern browsers today limit functionalities for sites that are not secure. For example: geolocation, push notifications and service workers don't work if your instance is not using HTTPS. And today is much more easy to setup a project with an SSL certificate than it was before (and for free, thanks to [Let's Encrypt](https://letsencrypt.org/)).
+    *理由:*
+    > HTTPS は、 e コマースウェブサイトだけではなく、データをやりとりする全てのウェブサイト用です。データとは、ユーザが共有するデータ、または外部エンティティと共有するデータです。今時の最新ブラウザは安全でないサイトの機能を制限しています。例えば、インスタンスが HTTPS を使用していない場合、位置情報、プッシュ通知、および Service Worker は機能しません。また、現在は SSL 証明書を使用したプロジェクトのセットアップが、以前よりもはるかに簡単になりました。（そして、 [Let's Encrypt](https://letsencrypt.org/) のおかげで無料です。）
 
  * 📖 [Why Use HTTPS? | Cloudflare](https://www.cloudflare.com/learning/security/why-use-https/)
  * 📖 [Enabling HTTPS Without Sacrificing Your Web Performance - Moz](https://moz.com/blog/enabling-https-without-sacrificing-web-performance)
@@ -560,44 +560,45 @@ Web サイト または アプリケーションのテストやモニタリン�
  * 📖 [HTTP versus HTTPS versus HTTP2 - The real story | Tune The Web](https://www.tunetheweb.com/blog/http-versus-https-versus-http2/)
  * 📖 [HTTP vs HTTPS — Test them both yourself](https://www.httpvshttps.com/)
 
-- [ ] **Page weight < 1500 KB (ideally < 500 KB):** ![high] Reduce the size of your page + resources as much as you can.
+- [ ] **ページ容量 < 1500 KB (理想的には < 500 KB):** ![high] ページとリソースのサイズをできるだけ減らす。
 
-    *Why:*
-    > Ideally you should try to target < 500 KB but the state of web shows that the median of Kilobytes is around 1500 KB (even on mobile). Depending on your target users, network connection, devices, it's important to reduce as much as possible your total Kilobytes to have the best user experience possible.
+    *理由:*
+    > 500 KB 未満を目標にするのが理想ですが、 Web の状態では、ページ容量の中央値が約 1500 KB （モバイルでも）であることが示されています。ターゲットユーザ、ネットワーク接続、デバイスに応じて、可能な限り総キロバイト数を減らすことで、可能な限り最高のユーザ体験を提供することができます。
 
-    *How:*
-    > ⁃ All the rules inside the Front-End Performance Checklist will help you to reduce as much as possible your resources and your code.
+    *方法:*
+    > ⁃ フロントエンドパフォーマンスチェックリスト内の全てのルールは、リソースとコードを可能な限り削減するのに役立ちます。
 
     * 📖 [Page Weight](https://httparchive.org/reports/page-weight#bytesTotal)
     * 🛠 [What Does My Site Cost?](https://whatdoesmysitecost.com/)
     * 🛠 [web - Measure full page size in Chrome DevTools - Stack Overflow](https://stackoverflow.com/questions/38239980/measure-full-page-size-in-chrome-devtools)
 
-- [ ] **Page load times < 3 seconds:** ![high] Reduce as much as possible your page load times to quickly deliver your content to your users.
+- [ ] **ページ読み込み時間 < 3 秒:** ![high] ページの読み込み時間を可能な限り短縮して、コンテンツを素早くユーザに配信する。
 
-    *Why:*
-    > Faster your website or app is, less you have probability of bounce increases, in other terms you have less chances to lose your user or future client. Enough researches on the subject prove that point.
+    *理由:*
+    > ウェブサイトやアプリが高速であればあるほど、離脱を増加する可能性を減らし、ユーザや将来のクライアントを失う可能性を減らします。主題に関する十分な調査は、この点を証明します。
 
-    *How:*
-    > Use online tools like [Page Speed Insight](https://developers.google.com/speed/pagespeed/insights/) or [WebPageTest](https://www.webpagetest.org/) to analyze what could be slowing you down and use the Front-End Performance Checklist to improve your load times.
+    *方法:*
+
+    > [Page Speed Insight](https://developers.google.com/speed/pagespeed/insights/) や [WebPageTest](https://www.webpagetest.org/) などのオンラインツールを使用して、何が遅くなるかを分析し、読み込み時間を短縮するために、フロントエンドパフォーマンスチェックリストを利用します。
 
     * 🛠 [Compare your mobile site speed](https://www.thinkwithgoogle.com/feature/mobile/)
     * 🛠 [Test Your Mobile Website Speed and Performance - Think With Google](https://testmysite.thinkwithgoogle.com/intl/en-us)
     * 📖 [Average Page Load Times for 2018 - How does yours compare? - MachMetrics Speed Blog](https://www.machmetrics.com/speed-blog/average-page-load-times-websites-2018/)
 
-- [ ] **Time To First Byte < 1.3 seconds:** ![high] Reduce as much as you can the time your browser waits before receiving data.
+- [ ] **最初の情報を受信する待ち時間 < 1.3 秒:** ![high] データを受信する前に、ブラウザが待機する時間をできる限り減らします。
 
     * 📖 [What is Waiting (TTFB) in DevTools, and what to do about it](https://scaleyourcode.com/blog/article/27)
     * 📖 [Monitoring your servers with free tools is easy](https://scaleyourcode.com/blog/article/7)
     * 📖 [Time to First Byte (TTFB)](https://varvy.com/pagespeed/ttfb.html)
     * 🛠 [Global latency testing tool](https://latency.apex.sh)
 
-* [ ] **Cookie size:** ![medium] If you are using cookies, be sure each cookie doesn't exceed 4096 bytes and your domain name doesn't have more than 20 cookies.
+* [ ] **クッキーサイズ:** ![medium] クッキーを利用しているのであれば、各クッキーが4096バイトを超えないようにし、ドメイン毎に20を超えるクッキーが無いようにしてください。
 
-    *Why:*
-    > Cookies are exchanged in the HTTP headers between web servers and browsers. It's important to keep the size of cookies as low as possible to minimize the impact on the user's response time.
+    *理由:*
+    > クッキーは、ウェブサーバとブラウザ間で HTTP ヘッダでやりとりされます。ユーザの応答時間への影響を最小限に抑えるために、クッキーのサイズをできる限り小さくすることが重要です。
 
-    *How:*
-    > Eliminate unnecessary cookies.
+    *方法:*
+    > 不要なクッキーを排除します。
 
     * 📖 [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
     * 📖 [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
@@ -605,30 +606,30 @@ Web サイト または アプリケーションのテストやモニタリン�
     * 📖 [Website Performance: Cookies Don't Taste So Good - Monitis Blog](http://www.monitis.com/blog/website-performance-cookies-dont-taste-so-good/)
     * 📖 [Google's Web Performance Best Practices #3: Minimize Request Overhead - GlobalDots Blog](https://www.globaldots.com/googles-web-performance-best-practices-3-minimize-request-overhead/)
 
-- [ ] **Minimizing HTTP requests:** ![high] Always ensure that every file requested are essential for your website or application.
+- [ ] **HTTP リクエストの最小化:** ![high] リクエストされている全てのファイルが、ウェブサイトまたはアプリケーションに不可欠であることを常に確認してください。
  * 📖 [Combine external CSS](https://varvy.com/pagespeed/combine-external-css.html)
  * 📖 [Combine external JavaScript](https://varvy.com/pagespeed/combine-external-javascript.html)
 
-- [ ] **Use a CDN to deliver your assets:** ![medium] Use a CDN to deliver faster your content over the world.
+- [ ] **CDN を使用してアセットを配信:** ![medium] CDN を利用して、コンテンツをより速く世界中に配信します。
 
  * 📖 [10 Tips to Optimize CDN Performance - CDN Planet](https://www.cdnplanet.com/blog/10-tips-optimize-cdn-performance/)
  * 📖 [HTTP Caching  |  Web Fundamentals  |  Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
 
-- [ ] **Serve files from the same protocol:** ![high] Avoid having your website serving files coming from source using HTTP on your website which is using HTTPS for example. If your website is using HTTPS, external files should come from the same protocol.
+- [ ] **同じプロトコルからファイルを提供:** ![high] 例えば、 HTTPS を使用しているウェブサイトで、 HTTP を使用したソースからファイルを提供するウェブサイトを作成しないでください。ウェブサイトが HTTPS を使用している場合、外部ファイルは同じプロトコルから取得する必要があります。
 
-- [ ] **Serve reachable files:** ![high] Avoid requesting unreachable files (404).
+- [ ] **到達可能なファイルを提供:** ![high] 到達不能なファイルへのリクエストを避けます（404）。
  * 📖 [How to avoid bad requests](https://varvy.com/pagespeed/avoid-bad-requests.html)
 
-- [ ] **Set HTTP cache headers properly:** ![high] Set HTTP headers to avoid expensive number of roundtrips between your browser and the server.
+- [ ] **HTTP キャッシュヘッダを適切に設定:** ![high] HTTP ヘッダを設定して、ブラウザとサーバ間の往復コストを回避します。
  * 📖 [Using cache-control for browser caching](https://varvy.com/pagespeed/cache-control.html)
 
-- [ ] **GZIP / Brotli compression is enabled:** ![high] Use a compression method such as Gzip or Brotli to reduce the size of your JavaScript files. With a smaller sizes file, users will be able to download the asset faster, resulting in improved performance.
+- [ ] **GZIP / Brotli 圧縮の有効化:** ![high] GZIP や Brotli などの圧縮方法を利用して、 JavaScript ファイルのサイズを小さくします。ファイルのサイズを小さくすると、ユーザはアセットをより速くダウンロードできるようになり、パフォーマンスが向上します。
 
  * 🛠 [Check GZIP compression](https://checkgzipcompression.com/)
  * 🛠 [Check Brotli Compression](https://tools.keycdn.com/brotli-test)
  * 📖 [Can I use... Brotli](https://caniuse.com/#feat=brotli)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ トップに戻る](#table-of-contents)**
 
 ---
 ## Performances and JS Frameworks
