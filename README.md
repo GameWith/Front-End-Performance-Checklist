@@ -467,13 +467,13 @@ List of the tools you can use to test or monitor your website or application:
     * 🛠 [Online JavaScript Compressor](http://refresh-sf.com)
     * 📖 [Short read: How is HTTP/2 different? Should we still minify and concatenate?](https://scaleyourcode.com/blog/article/28)
 
-* [ ] **内部に JavaScript はありません:** ![medium] *（ウェブサイトでのみ有効です）* body 内部に複数の JavaScript コードを埋め込むことは避けてください。JavaScript コードを外部ファイル内に、最終的には `<head>` 、またはページの最後（`</body>` の前）で再グループ化します。
+* [ ] **JavaScriptを内部には無記載 :** ![medium] *（ウェブサイトでのみ有効です）* body 内部に複数の JavaScript コードを埋め込むことは避けてください。JavaScript コードを外部ファイル内に、最終的には `<head>` 、またはページの最後（`</body>` の前）で再グループ化します。
 
     *理由:*
-    > JavaScript の埋め込みコードを直接 `<body>` に配置すると、DOM の構築中にページが読み込まれるため、ページの速度が低下する可能性があります。 最適なオプションは、DOM のブロックを回避するために、`async` または `defer` で外部ファイルを使用することです。 別のオプションは、`<head>` 内にいくつかのスクリプトを配置することです。ほとんどの場合は、DOM がメイン処理に到達する前にロードする必要がある分析コードまたは小さなスクリプトです。
+    > JavaScript の埋め込みコードを直接 `<body>` に配置すると、DOM の構築中にページが読み込まれるため、ページの速度が低下する可能性があります。 最適なオプションは、DOM のブロックを回避するために、`async` または `defer` で外部ファイルを使用することです。 別のオプションは、`<head>` 内にいくつかのスクリプトを配置することです。`<head>` に配置するスクリプトは、ほとんどの場合、DOM がメイン処理に到達する前にロードする必要がある分析コードまたは小さなスクリプトです。
 
     *方法:*
-    > すべてのファイルが `async` または `defer` を使用してロードされていることを確認し、`<head>` に挿入する必要があるコードを抜け目なく決定します。
+    > すべてのファイルが `async` または `defer` を使用してロードされていることを確認し、`<head>` に挿入する必要があるコードかどうか見極めましょう。
 
      * 📖 [11 Tips to Optimize JavaScript and Improve Website Loading Speeds](https://www.upwork.com/hiring/development/11-tips-to-optimize-javascript-and-improve-website-loading-speeds/)
 
@@ -497,7 +497,7 @@ List of the tools you can use to test or monitor your website or application:
     * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
     * 📖 [Defer loading JavaScript](https://varvy.com/pagespeed/defer-loading-javascript.html)
 
-* [ ] **最適化およびアップデートされた JS ライブラリ:** ![medium] プロジェクトで使用される全ての JavaScript ライブラリが必要であって（単純な機能についてはバニラ JavaScript を推奨）、JavaScript ライブラリを最新バージョンへアップデートし、不必要なメソッドで JavaScript を圧倒しないでください。
+* [ ] **最適化およびアップデートされた JS ライブラリ:** ![medium] プロジェクトで使用される全ての JavaScript ライブラリが必要であって（単純な機能についてはバニラ JavaScript を推奨）、JavaScript ライブラリを最新バージョンへアップデートし、不必要なメソッドで JavaScript をうめつくさないでください。
 
     *理由:*
     > ほとんどの場合、新しいバージョンには最適化とセキュリティ修正が含まれています。最適化されたコードでプロジェクトを高速化し、古いプラグインを使うことなく、ウェブサイトまたはアプリの速度を落とさないようにしてください。
@@ -509,7 +509,7 @@ List of the tools you can use to test or monitor your website or application:
     * 📖 [You may not need jQuery](http://youmightnotneedjquery.com/)
     * 📖 [Vanilla JavaScript for building powerful web applications](https://plainjs.com/)
 
-- [ ] **依存関係のサイズ制限を確認します:** ![low] 外部ライブラリを賢明に使用してください。ほとんどの場合、同じ機能であればより軽いライブラリを使用します。
+- [ ] **依存関係のサイズ制限を確認:** ![low] 外部ライブラリは見極めてから使用してください。ほとんどの場合、同じ機能であればより軽いライブラリを使用します。
 
     *理由:*
     > [npm](https://www.npmjs.com/) にある745 000パッケージのいずれかを使用したくなるかもしれませんが、ニーズに最適なパッケージを選択する必要があります。例えば、MomentJS は素晴らしいライブラリですが、まったく使われることがない多くのメソッドを備えているため、Day.js が作成されました。Day.js は2 kB で、MomentJS は16.4 kB gz です。
