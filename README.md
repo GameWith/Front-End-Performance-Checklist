@@ -398,7 +398,7 @@
     > 画像が原因で Web サイトの速度を低下させないようにするには、画像に適した形式を選びます。写真の場合、PNG や GIF よりも JPEG が適しています。ただし、ファイルのサイズを削減できる next-gen 形式を確認することを忘れないでください。各画像形式には長所と短所がありますが、最も良い選択をするためにこれらのことを知っておくことが重要です。
 
     *方法:*
-    > ⁃ [Lighthouse](https://developers.google.com/web/tools/lighthouse/) を使用して、画像が **next-gen 形式**  (like JPEG 2000m、JPEG XR、WebP など) を使用できるかを特定します。 <br>
+    > ⁃ [Lighthouse](https://developers.google.com/web/tools/lighthouse/) を使用して、画像が **next-gen 形式**（JPEG 2000m、JPEG XR、WebP など）を使用できるかを特定します。 <br>
     ⁃ 複数の異なる画像形式を比較してください。PNG8 よりも PNG16 を使用する方が良い場合もあります。
 
     * 📖 [Serve Images in Next-Gen Formats  |  Tools for Web Developers  |  Google Developers](https://developers.google.com/web/tools/lighthouse/audits/webp)
@@ -410,7 +410,6 @@
 
     *理由:*
     > ベクター画像 (SVG) はサイズが小さくなる傾向があり、レスポンシブでスケールすることができます。またこれらの画像は、CSS を使ってアニメーションしたり変更したりできます。
-
 
 * [ ] **画像の大きさ:** ![medium] レンダリング時の画像サイズがわかっている場合は、`<img>` タグに `width` と `height` の属性を設定します。
 
@@ -424,7 +423,7 @@
     * 📖 [When to base64 encode images (and when not to) | David Calhoun](https://www.davidbcalhoun.com/2011/when-to-base64-encode-images-and-when-not-to/)
    * 📖 [Base64 encoding images for faster pages | Performance and seo factors](https://varvy.com/pagespeed/base64-images.html)
 
-* [ ] **Lazy loading（遅延読み込み）:** ![medium] オフスクリーン画像（ブラウザに初期表示されない画像）は遅延ロードします（noscript fallback は常に提供されます）。
+* [ ] **Lazy loading（遅延読み込み）:** ![medium] オフスクリーン画像（ブラウザに初期表示されない画像）は遅延ロードします（noscript フォールバックは常に提供されます）。
 
     *理由:*
     > 表示画面の応答時間を短縮し、ユーザーが必要としない不要な画像の読み込みを回避することができます。
