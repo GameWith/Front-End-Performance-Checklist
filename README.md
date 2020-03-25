@@ -358,7 +358,7 @@
 
  * 📖 [Font Bytes - Page Weight](https://httparchive.org/reports/page-weight#bytesFont)
 
-- [ ] **フラッシュまたは不可視テキストの防止:** ![medium] ウェブフォントが読み込まれるまでは、テキストを透過させないようにします。
+- [ ] **フラッシュまたは不可視テキストの防止:** ![medium] ウェブフォントが読み込まれるまでは、テキストを透過させないようにします
 
  * 📖 [`font-display` for the Masses](https://css-tricks.com/font-display-masses/)
  * 📖 [CSS font-display: The Future of Font Rendering on the Web](https://www.sitepoint.com/css-font-display-future-font-rendering-web/)
