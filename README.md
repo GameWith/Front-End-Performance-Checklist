@@ -371,16 +371,16 @@
 
  * 📖 [Image Bytes in 2018](https://httparchive.org/reports/page-weight#bytesImg)
 
-* [ ] **Images optimization:** ![high] Your images are optimized, compressed without direct impact to the end user.
+* [ ] **画像の最適化:** ![high] エンドユーザーに直接影響を与えることなく画像を圧縮し、最適化してください。
 
-    *Why:*
-    > Optimized images load faster in your browser and consume less data.
+    *理由:*
+    > 最適化された画像はより高速にブラウザに読み込まれるため、データの消費が少なくなります。
 
-    *How:*
-    > ⁃ Try using CSS3 effects when it's possible (instead of a small image) <br>
-    ⁃ When it's possible, use fonts instead of text encoded in your images <br>
-    ⁃ Use SVG <br>
-    ⁃ Use a tool and specify a level compression under 85.
+    *方法:*
+    > ⁃ 可能であれば、CSS3 エフェクトを使用してください（小さな画像の代わりに） <br>
+    ⁃ 可能であれば、画像にはテキストエンコードの代わりにフォントを使用してください <br>
+    ⁃ SVG を使用してください <br>
+    ⁃ ツールを使って、圧縮レベルを 85 未満に指定してください
 
     * 📖 [Image Optimization | Web Fundamentals | Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization)
     * 📖 [Essential Image Optimization - An eBook by Addy Osmani](https://images.guide/)
@@ -392,64 +392,64 @@
     * 🛠 [SVGOMG - Optimize SVG vector graphics files](https://jakearchibald.github.io/svgomg/)
 
 
-* [ ] **Images format:** ![high] Choose your image format appropriately.
+* [ ] **画像形式:** ![high] 画像形式を適切に選んでください。
 
-    *Why:*
-    > To ensure that your images don't slow your website, choose the format that will correspond to your image. If it's a photo, JPEG is most of the time more appropriate than PNG or GIF. But don't forget to look a the nex-gen formats which can reduce the size of your files. Each image format has pros and cons, it's important to know these to make the best choice possible.
+    *理由:*
+    > 画像が原因で Web サイトの速度を低下させないようにするには、画像に適した形式を選びます。写真の場合、PNG や GIF よりも JPEG が適しています。ただし、ファイルのサイズを削減できる next-gen 形式を確認することを忘れないでください。各画像形式には長所と短所がありますが、最も良い選択をするためにこれらのことを知っておくことが重要です。
 
-    *How:*
-    > ⁃ Use [Lighthouse](https://developers.google.com/web/tools/lighthouse/) to identify which images can eventually use **next-gen formats** (like JPEG 2000m JPEG XR or WebP) <br>
-    ⁃ Compare different formats, sometimes using PNG8 is better than PNG16, sometimes it's not.
+    *方法:*
+    > ⁃ [Lighthouse](https://developers.google.com/web/tools/lighthouse/) を使用して、画像が **next-gen 形式**（JPEG 2000m、JPEG XR、WebP など）を使用できるかを特定します。 <br>
+    ⁃ 複数の異なる画像形式を比較してください。PNG8 よりも PNG16 を使用する方が良い場合もあります。
 
     * 📖 [Serve Images in Next-Gen Formats  |  Tools for Web Developers  |  Google Developers](https://developers.google.com/web/tools/lighthouse/audits/webp)
     * 📖 [What Is the Right Image Format for Your Website? — SitePoint](https://www.sitepoint.com/what-is-the-right-image-format-for-your-website/)
     * 📖 [PNG8 - The Clear Winner — SitePoint](https://www.sitepoint.com/png8-the-clear-winner/)
     * 📖 [8-bit vs 16-bit - What Color Depth You Should Use And Why It Matters - DIY Photography](https://www.diyphotography.net/8-bit-vs-16-bit-color-depth-use-matters/)
 
-- [ ] **Use vector image vs raster/bitmap:** ![medium] Prefer using vector image rather than bitmap images (when possible).
+- [ ] **ベクター画像かラスター/ビットマップを使用する:** ![medium] ビットマップ画像よりもベクター画像を使用することをお勧めします（可能な場合）。
 
-    *Why:*
-    > Vector images (SVG) tend to be smaller than images and SVG's are responsive and scale perfectly. These images can be animated and modified by CSS.
+    *理由:*
+    > ベクター画像 (SVG) はサイズが小さくなる傾向があり、レスポンシブでスケールすることができます。またこれらの画像は、CSS を使ってアニメーションしたり変更したりできます。
 
-* [ ] **Images dimensions:** ![medium] Set `width` and `height` attributes on `<img>` if the final rendered image size is known.
+* [ ] **画像の大きさ:** ![medium] レンダリング時の画像サイズがわかっている場合は、`<img>` タグに `width` と `height` の属性を設定します。
 
-    *Why:*
-    > If height and width are set, the space required for the image is reserved when the page is loaded. However, without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it. The effect will be that the page layout will change during loading (while the images load).
+    *理由:*
+    > あらかじめ画像に高さと幅が設定されていれば、ページをローディングする時に画像表示に必要なスペースが確保されますが、もしこれらの属性が設定されていなければ、ブラウザは画像のサイズを認識できず適切なスペースを確保することができません。これにより、ページ（画像ファイル）のローディング中に、レイアウトが変更されるという影響が出てしまいます。
 
-* [ ] **Avoid using Base64 images:** ![medium] You could eventually convert tiny images to base64 but it's actually not the best practice.
+* [ ] **Base64 画像の使用を避ける:** ![medium] 小さな画像であれば base64 に変換することもできますが、実際これはベストプラクティスではありません。
 
     * 📖 [Base64 Encoding & Performance, Part 1 and 2 by Harry Roberts](https://csswizardry.com/2017/02/base64-encoding-and-performance/)
     * 📖 [A closer look at Base64 image performance – The Page Not Found Blog](http://www.andygup.net/a-closer-look-at-base64-image-performance/)
     * 📖 [When to base64 encode images (and when not to) | David Calhoun](https://www.davidbcalhoun.com/2011/when-to-base64-encode-images-and-when-not-to/)
    * 📖 [Base64 encoding images for faster pages | Performance and seo factors](https://varvy.com/pagespeed/base64-images.html)
 
-* [ ] **Lazy loading:** ![medium] Offscreen images are loaded lazily (A noscript fallback is always provided).
+* [ ] **Lazy loading（遅延読み込み）:** ![medium] オフスクリーン画像（ブラウザに初期表示されない画像）は遅延ロードします（noscript フォールバックは常に提供されます）。
 
-    *Why:*
-    > It will improve the response time of the current page and then avoid loading unnecessary images that the user may not need.
+    *理由:*
+    > 表示画面の応答時間を短縮し、ユーザーが必要としない不要な画像の読み込みを回避することができます。
 
-    *How:*
-    > ⁃ Use [Lighthouse](https://developers.google.com/web/tools/lighthouse/) to identify how many **images are offscreen**. <br>
-    ⁃ Use a JavaScript plugin like the following to lazyload your images. Make sure you target offscreen images only. <br>
-    ⁃ Also make sure to lazyload alternative images shown at mouseover or upon other user actions.
+    *方法:*
+    > ⁃ [Lighthouse](https://developers.google.com/web/tools/lighthouse/) を使用して、**オフスクリーン画像** の数を特定します。<br>
+    ⁃ 以下のような JavaScript プラグインを使用して、画像の遅延読み込みを行います。必ずオフスクリーン画像のみを遅延読み込み対象にしてください。 <br>
+    ⁃ また、マウスオーバー時やユーザー操作時に表示される代替画像も遅延読み込みするようにしてください。
 
     * 🛠 [verlok/lazyload: GitHub](https://github.com/verlok/lazyload)
     * 🛠 [aFarkas/lazysizes: GitHub](https://github.com/aFarkas/lazysizes/)
     * 📖 [Lazy Loading Images and Video  |  Web Fundamentals  |  Google Developers](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/)
     * 📖 [5 Brilliant Ways to Lazy Load Images For Faster Page Loads - Dynamic Drive Blog](http://blog.dynamicdrive.com/5-brilliant-ways-to-lazy-load-images-for-faster-page-loads/)
 
-* [ ] **Responsive images:** ![medium] Ensure to serve images that are close to your display size.
+* [ ] **レスポンシブ画像:** ![medium] ディスプレイサイズに近い画像を利用するようにしてください。
 
-    *Why:*
-    > Small devices don't need images bigger than their viewport. It's recommended to have multiple versions of one image on different sizes.
+    *理由:*
+    > 画面が小さいデバイスでは、ビューポートよりも大きな画像を必要としません。1 つの画像をそれぞれの異なるサイズで複数枚用意しておくことをお勧めします。
 
-    *How:*
-    > ⁃ Create different image sizes for the devices you want to target. <br>
-    ⁃ Use `srcset` and `picture` to deliver multiple variants of each image.
+    *方法:*
+    > ⁃ ターゲットとするデバイス用に異なる画像サイズを作成します。<br>
+    ⁃ `srcset` 属性や `picture` タグを使用して、各画像の複数のバリエーションを配信します。
 
      * 📖 [Responsive images - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ トップに戻る](#table-of-contents)**
 
 ## JavaScript
 
