@@ -320,13 +320,13 @@
 
 * 📖 [A Book Apart, Webfont Handbook](https://abookapart.com/products/webfont-handbook)
 
-- [ ] **Webfont formats:** ![medium] You are using WOFF2 on your web project or application.
+- [ ] **ウェブフォント フォーマット:** ![medium] ウェブプロジェクトまたはアプリケーションで WOFF2 を使用しています。
 
-    *Why:*
-    > According to Google, the WOFF 2.0 Web Font compression format offers 30% average gain over WOFF 1.0. It's then good to use WOFF 2.0, WOFF 1.0 as a fallback and TTF.
+    *理由:*
+    > Google によると、WOFF 2.0 ウェブフォントの圧縮フォーマットは、WOFF 1.0 よりも平均 30% 向上します。その場合、WOFF 2.0、WOFF 1.0 をフォールバックおよび TTF として使用することをお勧めします。
 
-    *How:*
-    > Check before buying your new font that the provider gives you the WOFF2 format. If you are using a free font, you can always use Font Squirrel to generate all the formats you need.
+    *方法:*
+    > 新しいフォントを購入する前に、プロバイダが WOFF2 フォーマットを提供しているかことを確認してください。フリーフォントを使用している場合は、常に Font Squirrel を使用して必要なすべてのフォーマットを生成することができます。
 
     * 📖 [WOFF 2.0 – Learn more about the next generation Web Font Format and convert TTF to WOFF2](https://gist.github.com/sergejmueller/cf6b4f2133bcb3e2f64a)
     * 🛠 [Create Your Own @font-face Kits » Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator)
@@ -334,19 +334,19 @@
     * 📖 [Using @font-face | CSS-Tricks](https://css-tricks.com/snippets/css/using-font-face/?ref=frontendchecklist)
     * 📖 [Can I use... WOFF2](https://caniuse.com/#feat=woff2)
 
-- [ ] **Use `preconnect` to load your fonts faster:** ![medium]
+- [ ] **フォントをより速く読み込むには、`preconnect` を使用します:** ![medium]
 
     ```html
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     ```
 
-    *Why:*
-    > When you arrived on a website, your device needs to find out where your site lives and which server it needs to connect with. Your browser had to contact a DNS server and wait for the lookup complete before fetching the resource (fonts, CSS files...). Prefetches and preconnects allow the browser to lookup the DNS information and start establishing a TCP connection to the server hosting the font file. This provides a performance boost because by the time the browser gets around to parsing the css file with the font information and discovering it needs to request a font file from the server, it will already have pre-resolved the DNS information and have an open connection to the server ready in its connection pool.
+    *理由:*
+    > ウェブサイトにアクセスしたら、デバイスはそのサイトがどこにあり、どのサーバに接続する必要があるか検出する必要があります。ブラウザは、リソース(フォント、CSSファイル...)を取得する前に、DNSサーバに接続し、ルックアップが完了するのを待つ必要がありました。プリフェッチとプリコネクトを使用すると、ブラウザは DNS 情報を検索して、フォントファイルをホストしているサーバへの TCP 接続の確立を開始できます。これにより、ブラウザがフォント情報を含む CSS ファイルを解析し、サーバからフォントファイルを要求する必要があることを検出するまでに、DNS情報が事前に解決され、サーバへのオープン接続がコネクションプールに用意されているため、パフォーマンスが向上します。
 
-    *How:*
-    > ⁃ Before prefetching your webfonts, use webpagetest to evaluate your website <br>
-    ⁃ Look for teal colored DNS lookups and note the host that are being requested <br>
-    ⁃ Prefetch your webfonts in your `<head>` and add eventually these hostnames that you should prefetch too
+    *方法:*
+    > ⁃ ウェブフォントをプリフェッチする前に、webpagetest を使ってウェブサイトを評価しましょう <br>
+    ⁃ 青緑色のDNSルックアップを探して、要求されたホストをメモしてください <br>
+    ⁃ ウェブフォントを `<head>` の中でプリフェッチし、最終的にはプリフェッチする必要があるホスト名も追加してください
 
     * 📖 [Faster Google Fonts with Preconnect - CDN Planet](https://www.cdnplanet.com/blog/faster-google-webfonts-preconnect/)
     * 📖 [Make Your Site Faster with Preconnect Hints | Viget](https://www.viget.com/articles/make-your-site-faster-with-preconnect-hints/)
@@ -354,16 +354,16 @@
     * 📖 [A Comprehensive Guide to Font Loading Strategies—zachleat.com](https://www.zachleat.com/web/comprehensive-webfonts/#font-face)
     * 🛠 [typekit/webfontloader: Web Font Loader gives you added control when using linked fonts via @font-face.](https://github.com/typekit/webfontloader)
 
-- [ ] **Webfont size:** ![medium] Webfont sizes don't exceed 300kb (all variants included)
+- [ ] **ウェブフォント サイズ:** ![medium] ウェブフォントのサイズは 300kb 以下です(含まれているすべてのバリエーション)
 
  * 📖 [Font Bytes - Page Weight](https://httparchive.org/reports/page-weight#bytesFont)
 
-- [ ] **Prevent Flash or Invisible Text:** ![medium] Avoid transparent text until the Webfont is loaded
+- [ ] **フラッシュまたは不可視テキストの防止:** ![medium] ウェブフォントが読み込まれるまでは、テキストを透過させないようにします。
 
  * 📖 [`font-display` for the Masses](https://css-tricks.com/font-display-masses/)
  * 📖 [CSS font-display: The Future of Font Rendering on the Web](https://www.sitepoint.com/css-font-display-future-font-rendering-web/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ トップに戻る](#table-of-contents)**
 
 ## Images
 
