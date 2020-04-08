@@ -267,7 +267,7 @@
     > 未使用の CSS セレクタを削除すると、ファイルサイズが削減できアセットの読み込みも早くなります。
 
     *方法:*
-    > ⁃ ⚠️ 使用する CSS フレームワークにリセット CSS / ノーマライズ CSS のコードが含まれていないかどうかを常に確認してください。リセット CSS / ノーマライズ CSS ファイルに記載されている全てのコードを必要としない場合があります。
+    > ⁃ ⚠️ 使用する CSS フレームワークにリセット CSS/ノーマライズ CSS のコードが含まれていないかどうかを常に確認してください。リセット CSS/ノーマライズ CSS ファイルに記載されている全てのコードを必要としない場合があります。
 
     * 🛠 [UnCSS Online](https://uncss-online.com/)
     * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
@@ -341,7 +341,7 @@
     ```
 
     *理由:*
-    > ウェブサイトにアクセスしたら、デバイスはそのサイトがどこにあり、どのサーバに接続する必要があるか検出する必要があります。ブラウザは、リソース（フォント、CSSファイル...）を取得する前に、DNS サーバに接続し、ルックアップが完了するのを待つ必要がありました。プリフェッチとプリコネクトを使用すると、ブラウザは DNS 情報を検索して、フォントファイルをホストしているサーバへの TCP 接続の確立を開始できます。これにより、ブラウザがフォント情報を含む CSS ファイルを解析し、サーバからフォントファイルを要求する必要があることを検出するまでに、DNS 情報が事前に解決され、サーバへのオープン接続がコネクションプールに用意されているため、パフォーマンスが向上します。
+    > ウェブサイトにアクセスしたら、デバイスはそのサイトがどこにあり、どのサーバに接続する必要があるか検出する必要があります。ブラウザは、リソース（フォント、CSS ファイル...）を取得する前に、DNS サーバに接続し、ルックアップが完了するのを待つ必要がありました。プリフェッチとプリコネクトを使用すると、ブラウザは DNS 情報を検索して、フォントファイルをホストしているサーバへの TCP 接続の確立を開始できます。これにより、ブラウザがフォント情報を含む CSS ファイルを解析し、サーバからフォントファイルを要求する必要があることを検出するまでに、DNS 情報が事前に解決され、サーバへのオープン接続がコネクションプールに用意されているため、パフォーマンスが向上します。
 
     *方法:*
     > ⁃ ウェブフォントをプリフェッチする前に、webpagetest を使ってウェブサイトを評価しましょう <br>
@@ -406,7 +406,7 @@
     * 📖 [PNG8 - The Clear Winner — SitePoint](https://www.sitepoint.com/png8-the-clear-winner/)
     * 📖 [8-bit vs 16-bit - What Color Depth You Should Use And Why It Matters - DIY Photography](https://www.diyphotography.net/8-bit-vs-16-bit-color-depth-use-matters/)
 
-- [ ] **ベクター画像かラスター/ビットマップを使用する:** ![medium] ビットマップ画像よりもベクター画像を使用することをお勧めします（可能な場合）。
+- [ ] **ベクター画像かラスター/ビットマップを使用:** ![medium] ビットマップ画像よりもベクター画像を使用することをお勧めします（可能な場合）。
 
     *理由:*
     > ベクター画像 (SVG) はサイズが小さくなる傾向があり、レスポンシブでスケールすることができます。またこれらの画像は、CSS を使ってアニメーションしたり変更したりできます。
@@ -441,7 +441,7 @@
 * [ ] **レスポンシブ画像:** ![medium] ディスプレイサイズに近い画像を利用するようにしてください。
 
     *理由:*
-    > 画面が小さいデバイスでは、ビューポートよりも大きな画像を必要としません。1 つの画像をそれぞれの異なるサイズで複数枚用意しておくことをお勧めします。
+    > 画面が小さいデバイスでは、ビューポートよりも大きな画像を必要としません。1つの画像をそれぞれの異なるサイズで複数枚用意しておくことをお勧めします。
 
     *方法:*
     > ⁃ ターゲットとするデバイス用に異なる画像サイズを作成します。<br>
@@ -543,13 +543,13 @@
     * 📖 [What Are Service Workers and How They Help Improve Performance](https://www.keycdn.com/blog/service-workers/)
     * 📹 [How does a service worker work? - YouTube](https://www.youtube.com/watch?v=__xAtWgfzvc)
 
-**[⬆ トップに戻ります](#table-of-contents)**
+**[⬆ トップに戻る](#table-of-contents)**
 
 ## サーバ
 
 ![サーバサイド]
 
-- [ ] **ウェブサイトが HTTPS を使用していること:** ![high] 
+- [ ] **ウェブサイトが HTTPS を使用していること:** ![high]
 
     *理由:*
     > HTTPS は、 e コマースウェブサイトだけではなく、データをやりとりする全てのウェブサイト用です。データとは、ユーザが共有するデータ、または外部エンティティと共有するデータです。今時の最新ブラウザは安全でないサイトの機能を制限しています。例えば、インスタンスが HTTPS を使用していない場合、位置情報、プッシュ通知、および Service Worker は機能しません。また、現在は SSL 証明書を使用したプロジェクトのセットアップが、以前よりもはるかに簡単になりました。（そして、 [Let's Encrypt](https://letsencrypt.org/) のおかげで無料です。）
@@ -632,7 +632,7 @@
 **[⬆ トップに戻る](#table-of-contents)**
 
 ---
-## Performances and JS Frameworks
+## パフォーマンスと JS フレームワーク
 
 ### Angular
  * 📖 [Angular Performance Checklist](https://github.com/mgechev/angular-performance-checklist)
@@ -646,18 +646,18 @@
 ### Vue
  * 📖 [Vue - Useful Links|Style Guide and Performance](https://learn-vuejs.github.io/vue-patterns/useful-links/)
 
-## Performances and CMS
+## パフォーマンスと CMS
 
 ### WordPress
 
 * 🛠 [Test Your Website Speed | WordPress Hosting by @WPEngine](https://wpengine.com/speed-tool/)
 
-#### Articles
+#### 記事
 
  * 📖 [19 Tips to Speed Up WordPress Performance (Updated)](https://www.wpbeginner.com/wordpress-performance-speed/)
  * 📖 [Speed Up Your WordPress - How to Save Images Optimized for Web](https://www.wpbeginner.com/beginners-guide/speed-wordpress-save-images-optimized-web/)
 
-#### Plugins recommended
+#### 推奨プラグイン
 
 * 🛠 [Caching Plugin for WordPress - Speed up your website with WP Rocket](https://wp-rocket.me/)
 * 🛠 [WP-Sweep | WordPress.org](https://wordpress.org/plugins/wp-sweep/)
@@ -665,9 +665,9 @@
 
 ---
 
-## Translations
+## 翻訳
 
-The Front-End Performance Checklist wants to also be available in other languages! Don't hesitate to submit your contribution!
+Front-End Performance Checklist は、他言語でも利用できるようにしたいと考えています!迷わず投稿してください!
 
 * 🇵🇹 Portuguese: [fernandofawkes/Front-End-Performance-Checklist](https://github.com/fernandofawkes/Front-End-Performance-Checklist)
 * 🇨🇳 Chinese: [JohnsenZhou/Front-End-Performance-Checklist](https://github.com/JohnsenZhou/Front-End-Performance-Checklist)
@@ -677,40 +677,40 @@ The Front-End Performance Checklist wants to also be available in other language
 * 🇪🇸 Spanish: [dagerzuga/Front-End-Performance-Checklist](https://github.com/dagerzuga/Front-End-Performance-Checklist)
 * 🇻🇮 Vietnamese : [huynhan147/Front-End-Performance-Checklist](https://github.com/huynhan147/FrontEnd-Performance-Checklist)
 
-## Contributing
+## 貢献する
 
-**Open an issue or a pull request to suggest changes or additions.**
+**Issue やプルリクエストをオープンして、変更や追加を提案してください。**
 
-## Support
+## サポート
 
-If you have any question or suggestion, don't hesitate to use Discord or Twitter:
+質問や提案があれば、遠慮なく Discord や Twitter を利用して下さい:
 
 * [Chat on Discord](https://discord.gg/btHQRkm)
 * [Facebook](https://www.facebook.com/frontendchecklist/)
 * [Twitter](https://twitter.com/thedaviddias)
 
-## Author
+## 著者
 
 **Build with ❤️ by [David Dias](https://github.com/thedaviddias)
 
-## Contributors
+## 貢献者
 
-This project exists thanks to all the people who contribute. [[Contribute]](.github/CONTRIBUTING.md).
+このプロジェクトは、ご協力いただいた皆様のおかげで成り立っています。 [[貢献する]](.github/CONTRIBUTING.md).
 <a href="https://github.com/thedaviddias/Front-End-Performance-Checklist/graphs/contributors">
     <img src="https://opencollective.com/front-end-checklist/contributors.svg?width=890" />
 </a>
 
 
-## Backers
+## 後援者
 
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/front-end-checklist#backer)]
+ご支援いただいた皆様、ありがとうございました! 🙏 [[後援者になる](https://opencollective.com/front-end-checklist#backer)]
 
 <a href="https://opencollective.com/front-end-checklist#backers" target="_blank"><img src="https://opencollective.com/front-end-checklist/backers.svg?width=890"></a>
 
 
-## Sponsors
+## スポンサー
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/front-end-checklist#sponsor)]
+スポンサーになってこのプロジェクトをサポートしてください。スポンサーのロゴは、ウェブサイトへのリンクと共にここに表示されます。[[スポンサーになる](https://opencollective.com/front-end-checklist#sponsor)]
 
 <a href="https://opencollective.com/front-end-checklist/sponsor/0/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/1/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/1/avatar.svg"></a>
@@ -723,13 +723,13 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 <a href="https://opencollective.com/front-end-checklist/sponsor/8/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/9/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/9/avatar.svg"></a>
 
-## License
+## ライセンス
 
 [MIT](LICENSE)
 
-All icons are provided by [Icons8](https://icons8.com/)
+アイコンはすべて [Icons8](https://icons8.com/) によって提供されています。
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ トップに戻る](#table-of-contents)**
 
 [logo]: images/logo-front-end-performance-checklist.jpg
 [html]: images/html.png
